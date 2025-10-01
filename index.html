@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quijote Day - Vino Inteligente</title>
+    <meta name="description" content="Un evento único que fusiona la cultura de innovación más profunda de España (Don Quijote) con la tecnología más transformadora del presente (IA)">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'quijote-dark': '#250D03',
+                        'quijote-brown': '#5F2305',
+                        'quijote-brown-light': '#5C4A3E',
+                        'quijote-orange': '#953401',
+                        'quijote-orange-bright': '#D44012',
+                        'quijote-beige': '#CF8E5B',
+                        'quijote-beige-light': '#C2A5A1',
+                        'quijote-white': '#FDFDFD',
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .bg-hero {
+            background: linear-gradient(135deg, #250D03 0%, #5F2305 50%, #953401 100%);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        nav {
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            background-color: rgba(37, 13, 3, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-quijote-white">
+    
+    <!-- Navegación fija -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/img-001.jpg" alt="Qaracter Logo" class="h-8 md:h-10">
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-white hover:text-quijote-beige transition-colors duration-300">Inicio</a>
+                <a href="#que-es" class="text-white hover:text-quijote-beige transition-colors duration-300">¿Qué es?</a>
+                <a href="#objetivos" class="text-white hover:text-quijote-beige transition-colors duration-300">Objetivos</a>
+                <a href="#timing" class="text-white hover:text-quijote-beige transition-colors duration-300">Timing</a>
+                <a href="#inscripcion" class="text-white hover:text-quijote-beige transition-colors duration-300">Inscripción</a>
+            </div>
+            <a href="#inscripcion" class="bg-quijote-orange-bright hover:bg-quijote-orange text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 hover-lift">
+                Inscríbete
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center bg-hero overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="assets/images/img-000-optimized.jpg" alt="Background" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="container mx-auto px-4 py-20 relative z-10 text-center">
+            <div class="fade-in">
+                <!-- Fecha en círculo rotado -->
+                <div class="inline-block mb-8 transform -rotate-12 animate-pulse">
+                    <div class="bg-quijote-orange-bright text-white rounded-full w-32 h-32 md:w-40 md:h-40 flex flex-col items-center justify-center font-bold shadow-2xl">
+                        <span class="text-3xl md:text-4xl">16</span>
+                        <span class="text-xs md:text-sm uppercase tracking-wider">¡Estemos en</span>
+                        <span class="text-xs md:text-sm uppercase">El Toboso!</span>
+                        <span class="text-xs md:text-sm">Oct 2025</span>
+                    </div>
+                </div>
+                
+                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 text-shadow leading-tight">
+                    UN VINO QUE PIENSA.
+                </h1>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-quijote-beige mb-4 text-shadow">
+                    UN DÍA PARA CAMBIAR LA MIRADA
+                </h2>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-quijote-beige mb-4 text-shadow">
+                    SOBRE LA INTELIGENCIA ARTIFICIAL.
+                </h2>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 text-shadow">
+                    UN DÍA PARA BEBER LA INNOVACIÓN
+                </h2>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12 text-shadow">
+                    CON EL QUIJOTE
+                </h2>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
+                    <a href="#inscripcion" class="bg-quijote-orange-bright hover:bg-quijote-orange text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover-lift shadow-lg">
+                        Inscríbete Ahora
+                    </a>
+                    <a href="Quijote-Day-Vino-Inteligente.pdf" download class="bg-white hover:bg-quijote-beige-light text-quijote-brown px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover-lift shadow-lg">
+                        Descargar PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ¿Qué es Quijote Day? -->
+    <section id="que-es" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <h2 class="font-serif text-4xl md:text-5xl font-black text-quijote-brown mb-8">
+                        ¿QUÉ ES<br>
+                        <span class="text-quijote-orange-bright">QUIJOTE</span><br>
+                        <span class="text-quijote-orange-bright">DAY?</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                        Un evento único que fusiona la cultura de innovación más profunda de España (Don Quijote) 
+                        con la tecnología más transformadora del presente (IA), a través de una experiencia inmersiva, 
+                        sensorial y estratégica centrada en torno al <span class="font-bold text-quijote-orange">primer Vino Inteligente del Mundo</span>.
+                    </p>
+                </div>
+                <div class="fade-in flex justify-center">
+                    <div class="relative">
+                        <img src="assets/images/img-004.png" alt="Quijote Day Logo" class="w-full max-w-md rounded-lg shadow-2xl hover-lift">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagen destacada -->
+    <section class="py-12 bg-gradient-to-b from-white to-quijote-beige-light">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <img src="assets/images/img-006.png" alt="Don Quijote" class="w-full rounded-lg shadow-2xl hover-lift">
+            </div>
+        </div>
+    </section>
+
+    <!-- Objetivos del Evento -->
+    <section id="objetivos" class="py-20 bg-quijote-beige-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-4xl md:text-5xl font-black text-quijote-brown text-center mb-12">
+                OBJETIVOS<br>
+                <span class="text-quijote-orange-bright">DEL EVENTO</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-quijote-orange-bright text-white rounded-full flex items-center justify-center font-bold mr-4">1</div>
+                            <p class="text-gray-800 leading-relaxed">
+                                Recuperar la innovación disruptiva que representa El Quijote
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-quijote-orange-bright text-white rounded-full flex items-center justify-center font-bold mr-4">2</div>
+                            <p class="text-gray-800 leading-relaxed">
+                                Inspirar a las empresas a pensar diferente en un momento de cambio acelerado
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-quijote-orange-bright text-white rounded-full flex items-center justify-center font-bold mr-4">3</div>
+                            <p class="text-gray-800 leading-relaxed">
+                                Demostrar cómo la disrupción puede ser real, elegante, sensorial y cultural
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-quijote-orange-bright text-white rounded-full flex items-center justify-center font-bold mr-4">4</div>
+                            <p class="text-gray-800 leading-relaxed">
+                                Presentar el Vino Inteligente como símbolo de una nueva era de productos y servicios aumentados por IA
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-quijote-orange-bright text-white rounded-full flex items-center justify-center font-bold mr-4">5</div>
+                            <p class="text-gray-800 leading-relaxed">
+                                Aprovechar el impulso que supone la IA para repensar todos los aspectos de nuestras empresas y organizaciones
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover-lift">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-quijote-orange-bright text-white rounded-full flex items-center justify-center font-bold mr-4">6</div>
+                            <p class="text-gray-800 leading-relaxed">
+                                Disfrutar y beber con El Quijote uno de los mejores vinos, honrado, sereno, profundo y pionero en la utilización de IA: VALE de Bodegas Campo de Dulcinea
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagen del vino -->
+    <section class="py-12 bg-gradient-to-b from-quijote-beige-light to-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <img src="assets/images/img-007-optimized.jpg" alt="Vino Inteligente" class="w-full rounded-lg shadow-2xl hover-lift">
+            </div>
+        </div>
+    </section>
+
+    <!-- Timing -->
+    <section id="timing" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-4xl md:text-5xl font-black text-quijote-brown text-center mb-12">
+                <span class="text-quijote-orange-bright">TIMING</span>
+            </h2>
+            
+            <div class="max-w-3xl mx-auto bg-gradient-to-br from-quijote-brown to-quijote-orange p-8 rounded-2xl shadow-2xl text-white">
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-white text-quijote-orange-bright px-6 py-3 rounded-full font-bold text-2xl mb-4">
+                        16 OCTUBRE 2025
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige">16:00h</div>
+                        <div class="flex-1">
+                            <p>Salida del Bus. Paseo de la Castellana 93 - lateral - Torre Europa. Madrid</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige"></div>
+                        <div class="flex-1">
+                            <p>Llegada a El Toboso (Toledo)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige"></div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Presentación del encuentro.</p>
+                            <p class="text-sm text-quijote-beige mt-1">José Manuel Casado. Presidente de Qaracter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige"></div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Micro Master Class:</p>
+                            <p>Cómo Subirse a la IA.</p>
+                            <p class="text-sm text-quijote-beige mt-1">Óscar Martín García</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige"></div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Cata dinámica del Vino Inteligente que Habla</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige"></div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Degustación del libro "El Vino que piensa contigo".</p>
+                            <p class="text-sm text-quijote-beige mt-1">Chema San Segundo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige"></div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Descubriendo a Dulcinea.</p>
+                            <p class="text-sm text-quijote-beige mt-1">Ana de Andrés</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige"></div>
+                        <div class="flex-1">
+                            <p>Tertulia, picoteo y degustación</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex-shrink-0 w-24 font-bold text-quijote-beige">20:30h</div>
+                        <div class="flex-1">
+                            <p>Regreso a Madrid</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo decorativo -->
+    <section class="py-12 bg-gradient-to-b from-white to-quijote-dark">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto text-center">
+                <img src="assets/images/img-008.png" alt="Logo Decorativo" class="w-full max-w-xs mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Inscripción / Call to Action -->
+    <section id="inscripcion" class="py-20 bg-quijote-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-12">
+                    <div class="inline-block mb-8 transform -rotate-12">
+                        <div class="bg-quijote-orange-bright text-white rounded-full w-32 h-32 md:w-40 md:h-40 flex flex-col items-center justify-center font-bold shadow-2xl">
+                            <span class="text-3xl md:text-4xl">16</span>
+                            <span class="text-xs md:text-sm uppercase tracking-wider">¡Estemos en</span>
+                            <span class="text-xs md:text-sm uppercase">El Toboso!</span>
+                            <span class="text-xs md:text-sm">Oct 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="font-serif text-3xl md:text-4xl font-black mb-6">
+                    LO IMPOSIBLE YA ESTÁ EN LA PUERTA
+                </h2>
+                
+                <p class="text-lg md:text-xl mb-4 leading-relaxed">
+                    ...y nos toca gestionarlo en nuestras empresas. Ya no se trata de soñar sino de administrar directamente 
+                    los sueños que se están haciendo realidad: el conocimiento se multiplica exponencialmente cada semana y la 
+                    sociedad cuenta con recursos y herramientas impensables.
+                </p>
+                
+                <div class="my-12 p-8 bg-quijote-orange-bright rounded-2xl">
+                    <h3 class="font-bold text-2xl md:text-3xl mb-4">
+                        ¡BIENVENID@S A QUIJOTE DAY!
+                    </h3>
+                    <h3 class="font-bold text-2xl md:text-3xl mb-8">
+                        ¡BIENVENID@S A LA INNOVACIÓN PARA ESTOS DÍAS!
+                    </h3>
+                    
+                    <div class="space-y-6 mt-8">
+                        <div class="bg-white text-quijote-brown p-6 rounded-xl">
+                            <p class="font-bold text-xl mb-2">INSCRIPCIÓN</p>
+                            <a href="https://bit.ly/quijote-day-2025" target="_blank" class="text-quijote-orange-bright hover:text-quijote-orange text-xl font-bold underline">
+                                bit.ly/quijote-day-2025
+                            </a>
+                        </div>
+                        
+                        <div class="bg-white text-quijote-brown p-6 rounded-xl">
+                            <p class="font-bold text-xl mb-2">INFORMACIÓN</p>
+                            <p class="text-lg">Maribel</p>
+                            <a href="tel:682744475" class="text-quijote-orange-bright hover:text-quijote-orange text-xl font-bold">
+                                682 744 475
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
+                    <a href="https://bit.ly/quijote-day-2025" target="_blank" class="bg-quijote-orange-bright hover:bg-quijote-orange text-white px-10 py-5 rounded-full text-xl font-bold transition-all duration-300 hover-lift shadow-2xl w-full md:w-auto">
+                        Inscríbete Ahora
+                    </a>
+                    <a href="#que-es" class="bg-white hover:bg-quijote-beige-light text-quijote-brown px-10 py-5 rounded-full text-xl font-bold transition-all duration-300 hover-lift shadow-2xl w-full md:w-auto">
+                        Saber Más
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagen final -->
+    <section class="py-12 bg-quijote-dark">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto flex justify-center items-center gap-8">
+                <img src="assets/images/img-012.png" alt="QR Code" class="w-64 rounded-lg shadow-2xl">
+                <img src="assets/images/img-014.png" alt="Logo Final" class="w-32">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-quijote-brown text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 Quijote Day - Vino Inteligente</p>
+            <p class="text-sm text-quijote-beige">Un evento único que fusiona innovación y tradición</p>
+            <div class="mt-4 flex justify-center items-center">
+                <img src="assets/images/img-001.jpg" alt="Qaracter" class="h-12">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para efectos de scroll -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer para animaciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos con animación
+        document.querySelectorAll('.fade-in, .slide-in-left').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
