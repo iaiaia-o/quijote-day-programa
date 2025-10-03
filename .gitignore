@@ -14,3 +14,11 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Build input files (keep only compiled CSS)
+input.css
+tailwind.config.js

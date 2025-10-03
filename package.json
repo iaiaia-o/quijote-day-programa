@@ -1,0 +1,19 @@
+{
+  "name": "quijote-day-programa",
+  "version": "1.0.0",
+  "description": "Landing page responsive para el evento **Quijote Day**, que fusiona la cultura de innovación más profunda de España (Don Quijote) con la tecnología más transformadora del presente (IA).",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind -i ./input.css -o ./assets/css/styles.css --minify",
+    "watch:css": "tailwind -i ./input.css -o ./assets/css/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}
