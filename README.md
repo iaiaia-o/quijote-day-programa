@@ -22,6 +22,8 @@ Este sitio web es una conversión del PDF original "Quijote-Day-Vino-Inteligente
 quijote-day-programa/
 ├── index.html                          # Página principal
 ├── assets/
+│   ├── css/
+│   │   └── styles.css                  # CSS compilado de Tailwind
 │   └── images/                         # Imágenes extraídas del PDF
 │       ├── img-000-optimized.jpg       # Hero background (optimizado)
 │       ├── img-001.jpg                 # Logo Qaracter
@@ -33,6 +35,7 @@ quijote-day-programa/
 │       ├── img-014.png                 # Logo final
 │       └── ...
 ├── Quijote-Day-Vino-Inteligente.pdf   # PDF original
+├── package.json                        # Dependencias de Node.js
 └── README.md                           # Este archivo
 ```
 
@@ -48,7 +51,7 @@ quijote-day-programa/
 ## 🛠️ Tecnologías
 
 - HTML5
-- TailwindCSS (vía CDN)
+- TailwindCSS 3.x (compilado localmente)
 - Google Fonts (Montserrat, Playfair Display)
 - JavaScript (vanilla) para efectos de scroll
 - Optimización de imágenes con ImageMagick
@@ -59,6 +62,25 @@ El sitio está optimizado para:
 - 📱 **Móvil**: < 768px
 - 📱 **Tablet**: 768px - 1024px
 - 💻 **Desktop**: > 1024px
+
+## 🔧 Desarrollo
+
+Para modificar los estilos:
+
+1. Instalar dependencias:
+```bash
+npm install
+```
+
+2. Recompilar el CSS después de cambios:
+```bash
+npm run build:css
+```
+
+3. O usar modo watch para desarrollo:
+```bash
+npm run watch:css
+```
 
 ## 🎯 Evento
 
@@ -80,4 +102,4 @@ Todos los contenidos, textos e imágenes provienen del PDF original y son propie
 
 - **Organiza**: Qaracter
 - **Diseño original**: PDF creado en Canva por Luis Alves
-- **Conversión web**: Landing page responsive con TailwindCSS
+- **Conversión web**: Landing page responsive con TailwindCSS compilado localmente
